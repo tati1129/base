@@ -56,11 +56,11 @@ public class CustomObject {
     public static void main(String[] args) {
         CustomObject customObject = new CustomObject(0, 0.0, false, 'A', 0.0f, (byte) 0, (short) 0);
 
-        CustomObject[] customObjects = customObject.generateObj();
+        CustomObject[] newCustomObjects = customObject.generateObj();
 
 
-        for (int i = 0; i < customObjects.length; i++) {
-            System.out.println(customObjects[i]);
+        for (int i = 0; i < newCustomObjects.length; i++) {
+            System.out.println(newCustomObjects[i]);
         }
     }
 }
