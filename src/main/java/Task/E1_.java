@@ -3,7 +3,7 @@ package Task;
 //done
 
 
-public class E1 {
+public class E1_ {
 
     //1. Напишите метод, который принимает два целых числа и возвращает их сумму.
 

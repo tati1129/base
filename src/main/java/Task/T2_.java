@@ -3,7 +3,7 @@ package Task;
 
 import java.util.Arrays;
 
-class T2 {
+class T2_ {
     // 11. Напишите метод, который принимает массив чисел и возвращает их сумму.
     public static int getSumArr(int[] arr) {
         int sum = 0;
@@ -63,56 +63,49 @@ public static boolean numIsSimple(int a){
 
     // 17. Напишите метод, который проверяет, является ли число палиндромом
     // (одинаково читается слева направо и справа налево).
-
-
-
-
-
-
-
-
-
-
-    public static boolean isPalindrome(int number) {
-        String numStr = Integer.toString(number);
-        String reverseStr = new StringBuilder(numStr).reverse().toString();
-        if (numStr.equals(reverseStr)) {
-            return true;
-        }
-        return false;
-    }
+public static boolean isPalindrom(int number){
+        String strNumber = Integer.toString(number);
+        String strReverce = new StringBuilder(strNumber).reverse().toString();
+        return strNumber.equals(strReverce) ;
+}
 
     // 18. Напишите метод, который возвращает n-ое число Фибоначчи.
-    public static int fibonacci(int n) {
-        if (n == 0) {
+
+    public static int febonachiNum(int n){
+        // F(0), F(1);
+        // F(n-1) + F(n-2);
+        if (n == 0){
             return 0;
         }
-        if (n == 1) {
+        if (n == 1 ){
             return 1;
         }
-        int a = 0;
-        int b = 1;
-        int fib = 0;
+        int n1 = 0;
+        int n2 = 1;
+        int currentNum = 0;
         for (int i = 2; i <= n; i++) {
-            fib = a + b;
-            a = b;
-            b = fib;
+            currentNum = n1 + n2;
+            n1 = n2;
+            n2 = currentNum;
         }
-        return fib;
+        return currentNum;
     }
 
+
     // 19. Напишите метод, который принимает массив чисел и сортирует его по возрастанию.
-    public static int[] sortArray(int[] numbers) {
-        for (int i = 0; i < numbers.length - 1; i++) {
-            for (int j = i + 1; j < numbers.length; j++) {
-                if (numbers[i] > numbers[j]) {
-                    int temp = numbers[i];
-                    numbers[i] = numbers[j];
-                    numbers[j] = temp;
+    public static int[] sortArr(int[] arr){
+
+        int temp;
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
-        return numbers;
+        return arr;
     }
 
     // 20. Напишите метод, который принимает два числа и возвращает их наименьшее общее кратное (НОК).
@@ -126,36 +119,36 @@ public static boolean numIsSimple(int a){
     }
 
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 5, 4, 6, 3};
+        int[] array = {1, 2, 5, 4, 6, 3};
 
-//        System.out.print("11 Задача: ");
-//        System.out.println(sumArray(numbers));
-//
-//        System.out.print("12 Задача: ");
-//        System.out.println(power(5, 4));
-//
-//        System.out.print("13 Задача: ");
-//        System.out.println(isPrime(5));
-//
-//        System.out.print("14 Задача: ");
-//        System.out.println(gcd(10, 20));
-//
-//        System.out.print("15 Задача: ");
-//        System.out.println(maxInArray(numbers));
-//
-//        System.out.print("16 Задача: ");
-//        System.out.println(minInArray(numbers));
-//
-//        System.out.print("17 Задача: ");
-//        System.out.println(isPalindrome(1222));
-//
-//        System.out.print("18 Задача: ");
-//        System.out.println(fibonacci(8));
-//
-//        System.out.print("19 Задача: ");
-//        System.out.println(Arrays.toString(sortArray(numbers)));
-//
-//        System.out.print("20 Задача: ");
-//        System.out.println(lcm(10, 20));
+        System.out.print("11 Задача: ");
+        System.out.println(getSumArr(array));
+
+        System.out.print("12 Задача: ");
+        System.out.println(getIntSquare(5, 4));
+
+        System.out.print("13 Задача: ");
+        System.out.println(numIsSimple(5));
+
+        System.out.print("14 Задача: ");
+        System.out.println(biggerDived(10, 20));
+
+        System.out.print("15 Задача: ");
+        System.out.println(getMaxNumArr(array));
+
+        System.out.print("16 Задача: ");
+        System.out.println(getMinNumArr(array));
+
+        System.out.print("17 Задача: ");
+        System.out.println(isPalindrom(1222));
+
+        System.out.print("18 Задача: ");
+        System.out.println(febonachiNum(8));
+
+        System.out.print("19 Задача: ");
+        System.out.println(Arrays.toString(sortArr(array)));
+
+        System.out.print("20 Задача: ");
+        System.out.println(lcm(10, 20));
     }
 }

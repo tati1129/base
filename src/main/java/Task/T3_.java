@@ -4,7 +4,7 @@ package Task;
 
 import java.util.Arrays;
 
-public class T3 {
+public class T3_ {
 
     // 1. Напишите метод, который принимает массив целых чисел и возвращает его длину.
     public static int getArrLength(int[] arr) {

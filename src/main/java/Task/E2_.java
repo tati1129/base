@@ -3,7 +3,7 @@ package Task;
 //  папкa task_E2 --------------------------
 
 
-public class E2 {
+public class E2_ {
 
 
     /**
