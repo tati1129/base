@@ -31,9 +31,10 @@ class Animal {
     }
 }
 class Person{
+    static Person person1 = new Person();
     public static void main(String[] args) {
-        Dog dog = new Dog();
-        dog.hashCode()
+        Dog dog = new Dog(3,"Sam",person1 );
+        dog.hashCode();
 
     }
 }
