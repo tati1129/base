@@ -1,9 +1,9 @@
-package Task;
+package Task_homework;
 //done
 
 import java.util.Arrays;
 
-public class T4 {
+public class T4_ {
 
     // 1. Напишите метод, который принимает массив целых чисел и удваивает каждый его элемент.
     public static int[] doubleElemArr(int[] arr){
